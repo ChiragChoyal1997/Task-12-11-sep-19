@@ -17,9 +17,9 @@ else if(count>=10){
 <title>Insert title here</title>
 </head>
 <body>
-<h3>Book-Details</h3>
+<h3 align="Center">Book-Details</h3>
 <hr>
-<table>
+<table border=1 style="margin-left:43%">
 <tr><td>BCode</td><td><%=request.getAttribute("BCode")%></td></tr>
 <tr><td>Title</td><td><%=request.getAttribute("Title") %>}</td></tr>
 <tr><td>Author</td><td><%=request.getAttribute("Author") %></td></tr>
@@ -27,11 +27,15 @@ else if(count>=10){
 <tr><td>Price</td><td><%=price%></td></tr>
 </table>
 <hr>
+
 <form action="CartManager?price=<%=price%>" method="get">
-<input type="hidden" name="BCode" value='<%=(String)request.getAttribute("BCode")%>'>
-<input type="submit" value="Add To Cart">
+<pre>
+											<input type="hidden" name="BCode" value='<%=(String)request.getAttribute("BCode")%>'>
+											<input type="submit" value="Add To Cart">
+</pre>
 </form>
-<a href=SubjectPageServlet>Subject-Page</a><br>
-<a href=buyerpage.jsp>Buyer-Page</a><br>
+<pre>
+										<a href=SubjectPageServlet>Subject-Page</a>     <a href=buyerpage.jsp>Buyer-Page</a><br>
+</pre>
 </body>
 </html>
